@@ -29,7 +29,7 @@ function App() {
 	return (
 		<ThemeProvider theme={theme}>
 			<Box width={"100vw"}>
-				<Box mt={1}>
+				{/* <Box mt={1}>
 					<Container>
 						<Stack
 							direction={"row"}
@@ -55,15 +55,18 @@ function App() {
 							<NavBarButton>Experience</NavBarButton>
 						</Stack>
 					</Container>
-				</Box>
-				<Container>
-					<Box component={"main"}>
-						<Landing />
-						<About />
-						<MyWork />
-						<Experience />
+				</Box> */}
+
+				<Box component={"main"}>
+					<Box display={"flex"} flexDirection={"column"} alignItems={"center"}>
+						<Container>
+							<Landing />
+							<About />
+							<MyWork />
+							<Experience />
+						</Container>
 					</Box>
-				</Container>
+				</Box>
 			</Box>
 		</ThemeProvider>
 	);

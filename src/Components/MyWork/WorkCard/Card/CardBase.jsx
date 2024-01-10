@@ -1,9 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./flip-card-base-transition.css";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Chip, Link, Stack, Typography } from "@mui/material";
 import CardSide from "./CardSide";
-function CardBase({ children, onClick, imgSrc, gradient }) {
+import {
+	BacksideContentType,
+	FrontsideContentType,
+} from "../../WorkCardPropTypes";
+function CardBase({ onClick, frontContent, backContent }) {
 	return (
 		<Box
 			component={"div"}
@@ -19,28 +23,68 @@ function CardBase({ children, onClick, imgSrc, gradient }) {
 				className={"card-front"}
 				sx={{
 					backgroundColor: "black",
-					backgroundImage:
-						"linear-gradient(0deg, rgba(15, 7, 26, 0.75), rgba(15, 7, 26, 0.75)), url(/images/pressrekord/press-rekord-banner.png)",
-					backgroundSize: "120%",
+					backgroundImage: `${
+						frontContent.gradient ? frontContent.gradient + "," : ""
+					}url(${frontContent.backgroundSrc})`,
+					backgroundSize: "160%",
 					backgroundPosition: "center",
+					display: "flex",
+					flexDirection: "column",
+					alignItems: "center",
+					justifyContent: "space-between",
 				}}
 			>
-				<Box
-					component={"img"}
-					src="/images/pressrekord/press-rekord-logo.png"
-					sx={{ width: "70%", height: "auto" }}
-				/>
-				<Typography>Front</Typography>
-
+				<Stack alignItems={"center"}>
+					<Box
+						component={"img"}
+						src={frontContent.logoSrc}
+						sx={{ width: "70%", height: "auto" }}
+					/>
+					<Typography>{frontContent.title}</Typography>
+					<Typography>{frontContent.role}</Typography>
+					<Box
+						display={"flex"}
+						flexDirection={"row"}
+						sx={{ flexWrap: "wrap", width: "50%" }}
+					>
+						{frontContent.skills?.map((el) => (
+							<Chip
+								label={el}
+								display={"flex"}
+								flexGrow
+								sx={{
+									color: "white",
+									backgroundColor: "blue",
+									display: "flex",
+								}}
+							/>
+						))}
+					</Box>
+				</Stack>
 				<Button variant="outlined" color="primary" onClick={onClick}>
 					Flip
 				</Button>
 			</CardSide>
 			<CardSide
 				className={"card-back"}
-				sx={{ overflow: "scroll", transform: "rotateY(180deg)" }}
+				sx={{
+					overflow: "scroll",
+					transform: "rotateY(180deg)",
+				}}
 			>
-				<Box sx={{ height: 1000 }}></Box>
+				<Stack>
+					<Typography>{backContent.date}</Typography>
+					<Typography>{backContent.description}</Typography>
+
+					{backContent.links?.map((el) => (
+						<Link component={"a"} href={el.url} target="_blank">
+							{el?.displayName}
+						</Link>
+					))}
+				</Stack>
+				<Button variant="outlined" color="primary" onClick={onClick}>
+					Flip
+				</Button>
 			</CardSide>
 		</Box>
 	);
@@ -48,8 +92,8 @@ function CardBase({ children, onClick, imgSrc, gradient }) {
 
 CardBase.propTypes = {
 	onClick: PropTypes.func,
-	imgSrc: PropTypes.string,
-	gradient: PropTypes.string,
+	frontContent: PropTypes.shape(FrontsideContentType),
+	backContent: PropTypes.shape(BacksideContentType),
 };
 
 export default CardBase;

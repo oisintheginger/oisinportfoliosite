@@ -5,8 +5,12 @@ import { CSSTransition } from "react-transition-group";
 
 import "./CardContainer.css";
 import CardBase from "./Card/CardBase";
+import {
+	BacksideContentType,
+	FrontsideContentType,
+} from "../WorkCardPropTypes";
 
-function CardContainer({ children }) {
+function CardContainer({ frontContent, backContent }) {
 	const [flip, setFlip] = useState(true);
 	return (
 		<Box
@@ -19,14 +23,17 @@ function CardContainer({ children }) {
 					onClick={() => {
 						setFlip((prev) => !prev);
 					}}
-					imgSrc={""}
-					gradient={""}
+					frontContent={frontContent}
+					backContent={backContent}
 				/>
 			</CSSTransition>
 		</Box>
 	);
 }
 
-CardContainer.propTypes = {};
+CardContainer.propTypes = {
+	frontContent: PropTypes.shape(FrontsideContentType),
+	backContent: PropTypes.shape(BacksideContentType),
+};
 
 export default CardContainer;
