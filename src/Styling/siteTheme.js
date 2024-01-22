@@ -29,6 +29,15 @@ const theme = createTheme({
 		},
 		heroTitle: {},
 	},
+	components: {
+		MuiTypography: {
+			defaultProps: {
+				variantMapping: {
+					projectTitle: "h2",
+				},
+			},
+		},
+	},
 });
 theme.typography.heroTitle = {
 	fontSize: "5rem",
@@ -75,6 +84,16 @@ theme.typography.body2 = {
 	},
 	color: "#E3FAFB",
 	fontWeight: 300,
+	fontFamily: "Urbanist",
+};
+
+theme.typography.projectTitle = {
+	fontSize: "2rem",
+	[theme.breakpoints.down("md")]: {
+		fontSize: "2rem",
+	},
+	color: "#E3FAFB",
+	fontWeight: 900,
 	fontFamily: "Urbanist",
 };
 

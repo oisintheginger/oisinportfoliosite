@@ -2,7 +2,7 @@
 @media (prefers-reduced-motion:no-preference) {
     
     .fadeIn{
-        animation: fadeInAnim linear;
+        animation: fadeInAnim cubic-bezier(.37,.11,0,.83);
         animation-timeline: view();
         animation-range-start: cover;
         animation-range-end: 50svh;

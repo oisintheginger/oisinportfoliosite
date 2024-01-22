@@ -13,14 +13,15 @@ export default function About() {
 				gridColumnEnd: "main-end",
 				gridRowStart: "about-start",
 				gridColumnEnd: "about-end",
-
-				borderRadius: { lg: "0px 0px 50% 50%" },
+				scrollSnapType: "y mandatory",
+				borderRadius: { lg: "0px 0px 50svw 50svw" },
 			}}
 			display={"grid"}
 			gridTemplateColumns={"subgrid"}
 			bgcolor={"black"}
 		>
 			<Box
+				marginBlockStart={"6rem"}
 				marginBlockEnd={"3rem"}
 				sx={{ gridColumnStart: "main-start", gridColumnEnd: "main-end" }}
 				width={"100%"}
@@ -33,11 +34,7 @@ export default function About() {
 				sx={{
 					gridColumnStart: "content-start",
 					gridColumnEnd: "content-end",
-
 					minHeight: "100svh",
-					// backgroundColor: "#1D1D1D",
-					// borderRadius: ".5rem",
-					// marginBlockEnd: 10,
 				}}
 			>
 				<Box

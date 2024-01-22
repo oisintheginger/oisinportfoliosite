@@ -182,10 +182,19 @@ export default function Landing() {
 							flexDirection={"row"}
 							justifyContent={"flex-start"}
 						>
-							<Button variant="contained" sx={{ width: "50%", mr: 1 }}>
+							<Button
+								variant="contained"
+								sx={{ width: "50%", mr: 1 }}
+								href="mailto:oisintfitzpatrick@gmail.com"
+							>
 								Get in Contact
 							</Button>
-							<Button variant="outlined" sx={{ width: "50%" }}>
+							<Button
+								variant="outlined"
+								sx={{ width: "50%" }}
+								href="OisinFitzpatrickResume.pdf"
+								download={"OisinFitzpatrickResume.pdf"}
+							>
 								Resumé
 							</Button>
 						</Box>

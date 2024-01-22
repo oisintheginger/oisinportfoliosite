@@ -7,3 +7,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #1D1D1D;
 }
+
+body *::-webkit-scrollbar {
+  display: none;
+}
+
+body *{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

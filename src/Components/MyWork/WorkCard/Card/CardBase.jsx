@@ -27,44 +27,105 @@ function CardBase({ onClick, frontContent, backContent }) {
 					backgroundImage: `${
 						frontContent.gradient ? frontContent.gradient + "," : ""
 					}url(${frontContent.backgroundSrc})`,
-					backgroundSize: "160%",
+					backgroundSize: "cover",
 					backgroundPosition: "center",
-					display: "flex",
-					flexDirection: "column",
-					alignItems: "center",
-					justifyContent: "space-between",
 				}}
 			>
-				<Stack alignItems={"center"}>
+				<Box
+					height={"100%"}
+					width={"100%"}
+					display={"flex"}
+					flexDirection={"column"}
+					justifyContent={"space-between"}
+					alignItems={"center"}
+					// gridTemplateColumns={
+					// 	"[start] .2fr [button-left] .6fr [button-right] .2fr [end]"
+					// }
+					// gridTemplateRows={
+					// 	"[banner-start] 2fr [banner-end content-start] 1fr [content-end button-start] 0.2fr [button-end] "
+					// }
+					// gridAutoColumns={"none"}
+					// gridAutoRows={"none"}
+				>
 					<Box
-						component={"img"}
 						src={frontContent.logoSrc}
-						sx={{ width: "70%", height: "auto" }}
+						sx={{
+							width: "100%",
+							height: "30%",
+							backgroundSize: "contain",
+							backgroundRepeat: "no-repeat",
+							backgroundImage: `url(${frontContent.logoSrc})`,
+							backgroundPosition: "center",
+							display: { xs: "none", sm: "block" },
+						}}
 					/>
-					<Typography>{frontContent.title}</Typography>
-					<Typography>{frontContent.role}</Typography>
 					<Box
+						sx={{ width: "100%" }}
+						flexGrow={2}
 						display={"flex"}
-						flexDirection={"row"}
-						sx={{ flexWrap: "wrap", width: "50%" }}
+						flexDirection={"column"}
+						alignItems={"center"}
 					>
-						{frontContent.skills?.map((el) => (
-							<Chip
-								label={el}
-								display={"flex"}
-								flexGrow
-								sx={{
-									color: "white",
-									backgroundColor: "blue",
-									display: "flex",
-								}}
-							/>
-						))}
+						<Typography variant="projectTitle" align="center">
+							{frontContent.title}
+						</Typography>
+						<Typography textAlign={"center"} align="center">
+							{frontContent.role}
+						</Typography>
 					</Box>
-				</Stack>
-				<Button variant="outlined" color="primary" onClick={onClick}>
-					Flip
-				</Button>
+					<Box
+						sx={{ width: "100%", height: "30%" }}
+						display={"flex"}
+						flexDirection={"column"}
+						alignItems={"center"}
+						justifyContent={"center"}
+					>
+						<Box
+							maxWidth={"50%"}
+							display={"flex"}
+							flexDirection={"row"}
+							justifyContent={"center"}
+							sx={{
+								flexWrap: "wrap",
+								overflowY: "scroll",
+								paddingBlock: 2,
+								rowGap: 1,
+								columnGap: 1,
+								maskImage:
+									"linear-gradient(180deg, rgba(128,128,128,0) 0%,rgba(128,128,128,1) 10%,rgba(128,128,128,1) 90%, rgba(128,128,128,0) 100%)",
+							}}
+						>
+							{frontContent.skills?.map((el) => (
+								<Chip
+									label={el}
+									flexGrow
+									sx={{
+										mt: 0.5,
+										"& .MuiChip-label": {
+											fontWeight: 800,
+										},
+									}}
+									color="skillChip"
+								/>
+							))}
+						</Box>
+					</Box>
+
+					<Box
+						sx={{
+							height: "20%",
+							display: "flex",
+							flexDirection: "column",
+							alignItems: "center",
+							justifyContent: "flex-end",
+						}}
+						flexGrow={1}
+					>
+						<Button variant="outlined" color="primary" onClick={onClick}>
+							Flip
+						</Button>
+					</Box>
+				</Box>
 			</CardSide>
 			<CardSide
 				className={"card-back"}
