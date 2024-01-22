@@ -1,0 +1,25 @@
+
+@media (prefers-reduced-motion:no-preference) {
+    .rotateIn{
+        animation: rotateIn linear;
+        animation-timeline: view();
+        animation-range-start: cover;
+        animation-range-end: 50svh;
+        animation-fill-mode: forwards;
+        transform-origin: bottom center;
+        
+        
+    }
+    
+    @keyframes rotateIn {
+        from{
+            transform: rotateZ(10deg);
+            opacity: 0;
+
+        }
+        to{
+            transform: rotateZ(0deg);
+            opacity: 1;
+        }
+    }
+}

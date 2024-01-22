@@ -1,0 +1,88 @@
+:root{
+    --navBarCollapse: 50px;
+}
+
+
+.appBar{
+    background-color: #1D1D1D;
+    box-sizing: border-box;
+    overflow:hidden;
+    height: var(--navBarCollapse);
+    width: var(--navBarCollapse);
+    border-radius: calc((var(--navBarCollapse)/2));
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding-block: .5rem;
+    justify-content: center;
+    margin-inline: auto;
+    top: 0;
+    z-index: 100;
+    transition: width 1s;
+    position: sticky;
+    border-right: 100px;
+    border-color: red;
+    /* animation: collapse-horizontal;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode:forwards; */
+}
+.appBar::after{
+    position: relative;
+}
+
+.appBarIcon{
+    position: absolute;
+    left: 10px;
+}
+
+.navOptions{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+    scale: .6;
+    opacity: 0;
+    transition: scale 1s, opacity 1s;
+}
+
+.navOption{
+    cursor: pointer;
+}
+
+.appBar > .navOptions > .navOption {
+    margin-inline: 10px;
+    min-width: 5rem;
+    text-align: center;
+}
+
+.appBar.active{
+    width: 500px;
+
+}
+
+.appBar.active .navOptions{
+    scale: 1;
+    opacity: 1;
+}
+
+/* @keyframes collapse-horizontal {
+    from {width: 500px;}
+    to{ width: 50px;}
+}
+
+
+@keyframes grow-horizontal {
+    from{ width: 50px;}
+    to {width: 500px;}
+} */
+
+@media only screen and (max-width: 600px) {
+   
+    .appBar{
+        padding-inline: 10px;
+    
+    }
+  
+}

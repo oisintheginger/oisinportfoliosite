@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./flip-card-base-transition.css";
 import { Box, Button, Chip, Link, Stack, Typography } from "@mui/material";
+import ReactPlayer from "react-player/lazy";
 import CardSide from "./CardSide";
 import {
 	BacksideContentType,
@@ -72,7 +73,7 @@ function CardBase({ onClick, frontContent, backContent }) {
 					transform: "rotateY(180deg)",
 				}}
 			>
-				<Stack>
+				<Stack alignItems={"center"}>
 					<Typography>{backContent.date}</Typography>
 					<Typography>{backContent.description}</Typography>
 
@@ -81,6 +82,9 @@ function CardBase({ onClick, frontContent, backContent }) {
 							{el?.displayName}
 						</Link>
 					))}
+					{backContent.videoContentURL && (
+						<ReactPlayer url={backContent.videoContentURL} width={"80%"} />
+					)}
 				</Stack>
 				<Button variant="outlined" color="primary" onClick={onClick}>
 					Flip
