@@ -2,8 +2,6 @@
     --displacement: -60svh;
 }
 
-@media (prefers-reduced-motion:no-preference) {
-    
 
     .slideIn{
         animation: slideIn cubic-bezier(.37,.11,0,.83);
@@ -17,13 +15,12 @@
     
     @keyframes slideIn {
         from{
-            transform: translateX(var(--displacement)) scale(.5)!important;
-            opacity: 0!important;
+            transform: translateX(var(--displacement)) scale(.5);
+            opacity: 0;
         }
         to{
-            transform: translateX(0svw) scale(1)!important;
+            transform: translateX(0svw) scale(1);
 
-            opacity: 1!important;
+            opacity: 1;
         }
     }
-}

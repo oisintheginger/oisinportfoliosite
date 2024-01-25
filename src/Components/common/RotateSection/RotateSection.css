@@ -1,6 +1,5 @@
 
-@media (prefers-reduced-motion:no-preference) {
-    .rotateIn{
+   .rotateIn{
         animation: rotateIn cubic-bezier(.37,.11,0,.83);
         animation-timeline: view();
         animation-range-start: cover;
@@ -13,13 +12,12 @@
     
     @keyframes rotateIn {
         from{
-            transform: rotateZ(20deg)!important;
-            opacity: 0!important;
+            transform: rotateZ(20deg);
+            opacity: 0;
 
         }
         to{
-            transform: rotateZ(0deg)!important;
-            opacity: 1!important;
+            transform: rotateZ(0deg);
+            opacity: 1;
         }
     }
-}

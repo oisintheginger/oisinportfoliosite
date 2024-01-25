@@ -1,7 +1,5 @@
 
-@media (prefers-reduced-motion:no-preference) {
-    
-    .fadeIn{
+   .fadeIn{
         animation: fadeInAnim cubic-bezier(.37,.11,0,.83);
         animation-timeline: view();
         animation-range-start: cover;
@@ -13,14 +11,13 @@
     
     @keyframes fadeInAnim {
         from{
-            scale:0.7!important;
-            transform: translate(0px,100px)!important;
-            opacity: 0!important;
+            scale:0.7;
+            transform: translate(0px,100px) ;
+            opacity: 0;
         }
         to{
-            scale:1!important;
-            transform: translate(0px,0px)!important;
-            opacity: 1!important;
+            scale:1 ;
+            transform: translate(0px,0px);
+            opacity: 1;
         }
     }
-}
