@@ -108,7 +108,7 @@ export default function Landing() {
 					>
 						<Box
 							sx={{
-								backgroundImage: "url(/placeholder-portfolio-headshot.png)",
+								backgroundImage: "url(./placeholder-portfolio-headshot.png)",
 								backgroundSize: "cover",
 								backgroundRepeat: "no-repeat",
 							}}
