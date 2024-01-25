@@ -1,17 +1,4 @@
-import logo from "./logo.svg";
-import {
-	AppBar,
-	Container,
-	Link,
-	Toolbar,
-	Typography,
-	Stack,
-	ThemeProvider,
-	Box,
-	Button,
-	Divider,
-	styled,
-} from "@mui/material";
+import { Typography, Stack, ThemeProvider, Box } from "@mui/material";
 import "./App.css";
 import theme from "./Styling/siteTheme";
 import Landing from "./Components/Landing/Landing";
@@ -19,12 +6,6 @@ import MyWork from "./Components/MyWork/MyWork";
 import Experience from "./Components/Experience/Experience";
 import About from "./Components/About/About";
 import NavBar from "./Components/NavBar/NavBar";
-import { LinkedInIcon } from "./Icons/CustomIcons";
-const NavBarButton = styled(Button)({
-	color: "white",
-	display: "block",
-	width: "100px",
-});
 
 function App() {
 	return (

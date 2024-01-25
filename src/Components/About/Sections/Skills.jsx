@@ -1,6 +1,6 @@
 import React from "react";
 import SubsectionTitle from "../../common/SubsectionTitle/SubsectionTitle";
-import { Box, Divider, Grid, Icon, Stack, Typography } from "@mui/material";
+import { Box, Divider, Grid, Stack, Typography } from "@mui/material";
 
 import PropTypes from "prop-types";
 import FadeSection from "../../common/FadeSection/FadeSection";
@@ -51,6 +51,7 @@ export default function Skills() {
 								icon={
 									<img
 										src="/placeholder_icons/software-design-icon.svg"
+										alt="Software Design Icon"
 										width={128}
 										height={128}
 									/>
@@ -81,6 +82,7 @@ export default function Skills() {
 								icon={
 									<img
 										src="/placeholder_icons/programming-icon.svg"
+										alt="Programming Icon"
 										width={128}
 										height={128}
 									/>
@@ -113,6 +115,7 @@ export default function Skills() {
 										src="/placeholder_icons/ux-diagram.svg"
 										width={128}
 										height={128}
+										alt="UX Design Icon"
 									/>
 								}
 								description={[
@@ -143,6 +146,7 @@ export default function Skills() {
 										src="/placeholder_icons/game-design-icon.svg"
 										width={128}
 										height={128}
+										alt="Game Design Icon"
 									/>
 								}
 								description={[

@@ -4,7 +4,6 @@ import CardContainer from "./WorkCard/CardContainer";
 import SlideInSection from "../common/SlideInSection/SlideInSection";
 import ModalContext from "./ModalContext";
 import CloseIcon from "@mui/icons-material/Close";
-import SVGTopTriangleDivider from "../common/TriangleDivider/SVGTopTriangleDivider";
 
 export default function MyWork() {
 	const [modalOpen, setModalOpen] = useState(false);
@@ -60,7 +59,6 @@ export default function MyWork() {
 							left: "50%",
 							transform: "translate(-50%, -50%) rotateZ(2deg)",
 							background: "#305659",
-							position: "absolute",
 							width: "200svw",
 							height: "400px",
 							gridColumnEnd: "main-end",
@@ -78,7 +76,6 @@ export default function MyWork() {
 							left: "50%",
 							transform: "translate(-50%, -50%) rotateZ(0deg)",
 							background: "#75b4ba",
-							position: "absolute",
 							width: "200svw",
 							height: "300px",
 							gridColumnEnd: "main-end",
@@ -288,6 +285,7 @@ export default function MyWork() {
 					</IconButton>
 					<img
 						component={"img"}
+						alt="Modal Content"
 						width={"900px"}
 						height={"auto"}
 						style={{

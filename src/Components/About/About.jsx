@@ -10,7 +10,7 @@ export default function About() {
 				gridColumnStart: "main-start",
 				gridColumnEnd: "main-end",
 				gridRowStart: "about-start",
-				gridColumnEnd: "about-end",
+				gridRowEnd: "about-end",
 				scrollSnapType: "y mandatory",
 				// borderRadius: { lg: "0px 0px 50svw 50svw" },
 			}}

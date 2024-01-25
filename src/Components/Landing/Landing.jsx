@@ -1,15 +1,5 @@
-import {
-	Box,
-	Button,
-	Container,
-	Divider,
-	Grid,
-	Stack,
-	Typography,
-} from "@mui/material";
+import { Box, Button, Divider, Typography } from "@mui/material";
 import React from "react";
-import Headshot from "./Headshot";
-import { Circle } from "@mui/icons-material";
 
 export default function Landing() {
 	return (
