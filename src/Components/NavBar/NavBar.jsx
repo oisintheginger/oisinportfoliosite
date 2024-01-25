@@ -11,8 +11,16 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+import CloseIcon from "@mui/icons-material/Close";
+
 import AdbIcon from "@mui/icons-material/Adb";
-import { Drawer, useMediaQuery, useTheme } from "@mui/material";
+import {
+	Drawer,
+	List,
+	ListItemButton,
+	useMediaQuery,
+	useTheme,
+} from "@mui/material";
 import { LogoIconWhite } from "../../Icons/CustomIcons";
 
 const pages = ["About", "My Work", "Experience"];
@@ -36,19 +44,42 @@ export default function NavBar() {
 						...(down && { minHeight: "32px", height: "32px" }),
 						// backgroundColor: "rgba(29, 29, 29, 0.001)",
 						// backdropFilter: "blur(0.65px)",
-						paddingBlockStart: 1,
+						paddingBlock: 1,
+						position: "relative",
 					}}
 					variant={"dense"}
 				>
-					<LogoIconWhite
+					<IconButton
+						href={"#Landing"}
 						sx={{
-							height: "32px",
-							width: "32px",
-							mr: 3,
-							display: { xs: "none", md: "block" },
-							cursor: "pointer",
+							display: { xs: "block", md: "none" },
+							position: "absolute",
+							left: "50%",
+							bottom: "50%",
+							transform: "translate(-50%, 50%)",
 						}}
-					/>
+					>
+						<LogoIconWhite
+							sx={{
+								height: "32px",
+								width: "32px",
+							}}
+						/>
+					</IconButton>
+					<IconButton
+						href={"#Landing"}
+						sx={{ display: { xs: "none", md: "block" } }}
+					>
+						<LogoIconWhite
+							sx={{
+								height: "32px",
+								width: "32px",
+								mr: 3,
+
+								cursor: "pointer",
+							}}
+						/>
+					</IconButton>
 					<Box
 						sx={{
 							flexGrow: 1,
@@ -61,7 +92,7 @@ export default function NavBar() {
 							aria-controls="menu-appbar"
 							aria-haspopup="true"
 							onClick={toggleNavOpen}
-							color="inherit"
+							color="primary"
 						>
 							<MenuIcon />
 						</IconButton>
@@ -79,6 +110,7 @@ export default function NavBar() {
 					>
 						{pages.map((page) => (
 							<Button
+								href={`#${page}`}
 								key={page}
 								onClick={() => {
 									setNavOpen(false);
@@ -88,7 +120,7 @@ export default function NavBar() {
 									display: "block",
 								}}
 							>
-								{page}
+								{page.toUpperCase()}
 							</Button>
 						))}
 					</Box>
@@ -100,12 +132,84 @@ export default function NavBar() {
 							sx: {
 								backgroundColor: "siteBackground.main",
 								width: { xs: "100vw", sm: "16vw" },
-								pt: { xs: "2px", sm: "20px" },
 								minWidth: { xs: "100vw", sm: "300px" },
+								paddingBlock: 5,
+								display: "flex",
+								flexDirection: "column",
+								position: "relative",
 							},
 						}}
 						open={navOpen}
-					></Drawer>
+					>
+						<Box
+							sx={{
+								display: "flex",
+								flexDirection: "column",
+								alignItems: "center",
+							}}
+						>
+							<IconButton
+								onClick={(e) => {
+									e.preventDefault();
+									setNavOpen(false);
+									document
+										.getElementById("Landing")
+										?.scrollIntoView({ behavior: "smooth" });
+								}}
+							>
+								<LogoIconWhite
+									sx={{
+										height: "32px",
+										width: "32px",
+
+										cursor: "pointer",
+									}}
+								/>
+							</IconButton>
+							<List>
+								{pages.map((el) => (
+									<ListItemButton
+										href={el}
+										onClick={(e) => {
+											e.preventDefault();
+											setNavOpen(false);
+											document
+												.getElementById(el)
+												.scrollIntoView({ behavior: "smooth" });
+										}}
+										sx={{ fontSize: "1.5rem", width: "100%" }}
+									>
+										<Typography
+											variant="button"
+											color={"primary"}
+											textAlign={"center"}
+											width={"100%"}
+										>
+											{el.toUpperCase()}
+										</Typography>
+									</ListItemButton>
+								))}
+							</List>
+						</Box>
+						<Box
+							sx={{
+								position: "absolute",
+								left: "50%",
+								bottom: "10%",
+								transform: "translate(-50%, -50%)",
+							}}
+						>
+							<IconButton
+								onClick={() => {
+									setNavOpen(false);
+								}}
+								color="primary"
+								size="large"
+							>
+								<CloseIcon />
+							</IconButton>
+						</Box>
+					</Drawer>
 				)}
 			</AppBar>
 		</Box>

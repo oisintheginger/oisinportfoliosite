@@ -4,6 +4,7 @@ import { Box, Divider, Grid, Icon, Stack, Typography } from "@mui/material";
 
 import PropTypes from "prop-types";
 import FadeSection from "../../common/FadeSection/FadeSection";
+import SkillChip from "../../common/SkillChip/SkillChip";
 
 function Skill(props) {
 	return (
@@ -37,7 +38,13 @@ export default function Skills() {
 			<Stack spacing={2} alignItems={"center"}>
 				<SubsectionTitle>Skills</SubsectionTitle>
 				<FadeSection>
-					<Grid container width={"100%"} rowSpacing={8} columnSpacing={2}>
+					<Grid
+						container
+						width={"100%"}
+						rowSpacing={8}
+						columnSpacing={2}
+						justifyContent={"center"}
+					>
 						<Grid item xs={12} sm={6}>
 							<Skill
 								title={"Software Design + Development"}
@@ -143,6 +150,62 @@ export default function Skills() {
 									"I also have extensive experience developing in agile teams.",
 								]}
 							/>
+							<Box
+								display={"flex"}
+								flexDirection={"column"}
+								alignItems={"center"}
+							>
+								<Box width={"200px"}>
+									<Divider
+										sx={{ mt: 1, backgroundColor: "white" }}
+										orientation="horizontal"
+										variant="middle"
+										flexItem
+									/>
+								</Box>
+							</Box>
+						</Grid>
+						<Grid item xs={12} sm={6}>
+							<Box width={"100%"} display={"flex"} flexDirection={"column"}>
+								<Typography variant="skillTitle" textAlign={"center"}>
+									{"Other Skills and Technologies"}
+								</Typography>
+							</Box>
+							<Box
+								width={"100%"}
+								display={"flex"}
+								flexDirection={"row"}
+								flexWrap={"wrap"}
+								alignItems={"center"}
+								justifyContent={"center"}
+								columnGap={0.5}
+								rowGap={0.2}
+							>
+								{[
+									"JavaScript",
+									"C#",
+									"Python",
+									"SQL",
+									"React",
+									"NodeJS",
+									"ExpressJS",
+									"MaterialUI",
+									"Unity",
+									"User Evaluation",
+									"Software Design",
+									"Software Testing",
+									"UML",
+									"Git",
+									"Jest",
+									"Jenkins",
+									"Code Review",
+									"Jira",
+									"Communication",
+									"Problem Solving",
+								].map((el) => {
+									return <SkillChip label={el} flexGrow />;
+								})}
+							</Box>
 							<Box
 								display={"flex"}
 								flexDirection={"column"}

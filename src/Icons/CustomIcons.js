@@ -1,5 +1,4 @@
 import { createSvgIcon } from "@mui/material";
-
 export const LogoIconWhite = createSvgIcon(
 	<svg
 		width="568"

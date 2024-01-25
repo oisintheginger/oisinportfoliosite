@@ -19,6 +19,7 @@ import MyWork from "./Components/MyWork/MyWork";
 import Experience from "./Components/Experience/Experience";
 import About from "./Components/About/About";
 import NavBar from "./Components/NavBar/NavBar";
+import { LinkedInIcon } from "./Icons/CustomIcons";
 const NavBarButton = styled(Button)({
 	color: "white",
 	display: "block",
@@ -29,33 +30,6 @@ function App() {
 	return (
 		<ThemeProvider theme={theme}>
 			<NavBar />
-			{/* <NavBar /> */}
-			{/* <Box mt={1}>
-					<Stack
-						direction={"row"}
-						width={"100%"}
-						justifyContent={"center"}
-						spacing={10}
-					>
-						<NavBarButton>About</NavBarButton>
-						<Divider
-							orientation="vertical"
-							flexItem
-							sx={{
-								color: "white",
-								bgcolor: "white",
-							}}
-						/>
-						<NavBarButton>My Work</NavBarButton>
-						<Divider
-							orientation="vertical"
-							flexItem
-							sx={{ color: "white", bgcolor: "white" }}
-						/>
-						<NavBarButton>Experience</NavBarButton>
-					</Stack>
-				</Box> */}
-
 			<Box
 				display={"grid"}
 				gridTemplateColumns={{
@@ -63,18 +37,55 @@ function App() {
 					md: "[main-start] .2fr [inset-margin-start] .8fr [content-start] 1.3fr [center-line] 1.3fr [content-end]  .8fr [inset-margin-end] .2fr[main-end]",
 				}}
 				gridTemplateRows={{
-					xs: "[landing-start] auto [landing-end about-start] auto [about-end my-work-start] auto ",
-					md: "[landing-start] 100svh [landing-end about-start] auto [about-end my-work-start] auto ",
+					xs: "[landing-start] auto [landing-end about-start] auto [about-end my-work-start] auto [my-work-end experience-start] auto [experience-end]",
+					md: "[landing-start] 100svh [landing-end about-start] auto [about-end my-work-start] auto [my-work-end experience-start] auto [experience-end]",
 				}}
-				gridAutoRows={"auto"}
 				overflow={"clip"}
 			>
 				<Landing />
-
 				<About />
 				<MyWork />
-				{/* <Experience /> */}
+				<Experience />
 			</Box>
+			<Stack
+				display={"flex"}
+				direction={"column"}
+				spacing={2}
+				alignItems={"center"}
+				justifyContent={"flex-start"}
+				width={"100%"}
+				height={"10svh"}
+				mb={5}
+			>
+				<Stack direction={"row"} justifyContent={"center"} spacing={3}>
+					<Box
+						component={"a"}
+						target="_blank"
+						href={"https://www.linkedin.com/in/oisin-fitzpatrick/"}
+						sx={{
+							background: 'url("./linkedInIcon.svg")',
+							backgroundSize: "contain",
+							cursor: "pointer",
+						}}
+						width={"2rem"}
+						height={"2rem"}
+					/>
+					<Box
+						component={"a"}
+						target="_blank"
+						href={"https://github.com/oisintheginger"}
+						sx={{
+							background: 'url("./githubIcon.svg")',
+							backgroundSize: "contain",
+							cursor: "pointer",
+						}}
+						width={"2rem"}
+						height={"2rem"}
+					/>
+				</Stack>
+				<Typography>Built with React and MUI</Typography>
+				<Typography>&copy; Oisín Fitzpatrick 2024</Typography>
+			</Stack>
 		</ThemeProvider>
 	);
 }

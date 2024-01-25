@@ -97,4 +97,24 @@ theme.typography.projectTitle = {
 	fontFamily: "Urbanist",
 };
 
+theme.typography.experienceRole = {
+	fontSize: "2rem",
+	[theme.breakpoints.down("md")]: {
+		fontSize: "2rem",
+	},
+	color: "#E3FAFB",
+	fontWeight: 500,
+	fontFamily: "Urbanist",
+};
+
+theme.typography.experienceDetail = {
+	fontSize: "1.1rem",
+	[theme.breakpoints.down("md")]: {
+		fontSize: "1.1rem",
+	},
+	color: "#E3FAFB",
+	fontWeight: 200,
+	fontFamily: "Urbanist",
+};
+
 export default theme;

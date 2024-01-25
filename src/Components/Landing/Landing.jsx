@@ -27,6 +27,7 @@ export default function Landing() {
 				display={{ xs: "none", lg: "block" }}
 			/>
 			<Box
+				id={"Landing"}
 				sx={{
 					gridColumnStart: "main-start",
 					gridColumnEnd: "main-end",
@@ -130,8 +131,8 @@ export default function Landing() {
 						<Box
 							component={"img"}
 							src="/placeholder-portfolio-headshot-small.png"
-							height={"200px"}
-							width={"200px"}
+							height={{ xs: "150px", md: "200px" }}
+							width={{ xs: "150px", md: "200px" }}
 							borderRadius={"50%"}
 							sx={{
 								background:
@@ -187,7 +188,7 @@ export default function Landing() {
 								sx={{ width: "50%", mr: 1 }}
 								href="mailto:oisintfitzpatrick@gmail.com"
 							>
-								Get in Contact
+								Contact
 							</Button>
 							<Button
 								variant="outlined"

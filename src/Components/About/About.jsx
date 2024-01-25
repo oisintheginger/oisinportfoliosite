@@ -1,27 +1,25 @@
 import { Box, Typography } from "@mui/material";
-import React from "react";
-import SubsectionTitle from "../common/SubsectionTitle/SubsectionTitle";
 import Skills from "./Sections/Skills";
 import Education from "./Sections/Education";
-import FadeSection from "../common/FadeSection/FadeSection";
 
 export default function About() {
 	return (
 		<Box
+			id={"About"}
 			sx={{
 				gridColumnStart: "main-start",
 				gridColumnEnd: "main-end",
 				gridRowStart: "about-start",
 				gridColumnEnd: "about-end",
 				scrollSnapType: "y mandatory",
-				borderRadius: { lg: "0px 0px 50svw 50svw" },
+				// borderRadius: { lg: "0px 0px 50svw 50svw" },
 			}}
 			display={"grid"}
 			gridTemplateColumns={"subgrid"}
 			bgcolor={"black"}
 		>
 			<Box
-				marginBlockStart={"6rem"}
+				marginBlockStart={"3rem"}
 				marginBlockEnd={"3rem"}
 				sx={{ gridColumnStart: "main-start", gridColumnEnd: "main-end" }}
 				width={"100%"}
@@ -34,7 +32,7 @@ export default function About() {
 				sx={{
 					gridColumnStart: "content-start",
 					gridColumnEnd: "content-end",
-					minHeight: "100svh",
+					minHeight: "min-content",
 				}}
 			>
 				<Box
@@ -67,6 +65,17 @@ export default function About() {
 					<Education />
 				</Box>
 			</Box>
+			<Box
+				sx={{
+					gridColumnStart: "main-start",
+					gridColumnEnd: "main-end",
+					background: "url(./about-divider-wave.svg)",
+					width: "100%",
+					height: "100px",
+					backgroundSize: "cover",
+					backgroundRepeat: "no-repeat",
+				}}
+			/>
 		</Box>
 	);
 }

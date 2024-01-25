@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import "./flip-card-base-transition.css";
 import { Box, Button, Chip, Link, Stack, Typography } from "@mui/material";
@@ -8,7 +8,10 @@ import {
 	BacksideContentType,
 	FrontsideContentType,
 } from "../../WorkCardPropTypes";
+import SkillChip from "../../../common/SkillChip/SkillChip";
+import ModalContext from "../../ModalContext";
 function CardBase({ onClick, frontContent, backContent }) {
+	const openModal = useContext(ModalContext);
 	return (
 		<Box
 			component={"div"}
@@ -81,7 +84,7 @@ function CardBase({ onClick, frontContent, backContent }) {
 						justifyContent={"center"}
 					>
 						<Box
-							maxWidth={"50%"}
+							maxWidth={"80%"}
 							display={"flex"}
 							flexDirection={"row"}
 							justifyContent={"center"}
@@ -96,17 +99,7 @@ function CardBase({ onClick, frontContent, backContent }) {
 							}}
 						>
 							{frontContent.skills?.map((el) => (
-								<Chip
-									label={el}
-									flexGrow
-									sx={{
-										mt: 0.5,
-										"& .MuiChip-label": {
-											fontWeight: 800,
-										},
-									}}
-									color="skillChip"
-								/>
+								<SkillChip label={el} flexGrow />
 							))}
 						</Box>
 					</Box>
@@ -122,7 +115,7 @@ function CardBase({ onClick, frontContent, backContent }) {
 						flexGrow={1}
 					>
 						<Button variant="outlined" color="primary" onClick={onClick}>
-							Flip
+							Open Project
 						</Button>
 					</Box>
 				</Box>
@@ -130,26 +123,74 @@ function CardBase({ onClick, frontContent, backContent }) {
 			<CardSide
 				className={"card-back"}
 				sx={{
-					overflow: "scroll",
 					transform: "rotateY(180deg)",
+					background: "#111112",
 				}}
 			>
-				<Stack alignItems={"center"}>
-					<Typography>{backContent.date}</Typography>
-					<Typography>{backContent.description}</Typography>
+				<Box
+					width={"100%"}
+					display={"flex"}
+					flexDirection={"column"}
+					alignItems={"center"}
+					sx={{
+						maskImage:
+							"linear-gradient(180deg, rgba(128,128,128,0) 0%,rgba(128,128,128,1) 5%,rgba(128,128,128,1) 95%, rgba(128,128,128,0) 100%)",
 
-					{backContent.links?.map((el) => (
-						<Link component={"a"} href={el.url} target="_blank">
-							{el?.displayName}
-						</Link>
-					))}
+						overflow: "scroll",
+						paddingBlock: 1,
+					}}
+				>
+					<Typography textAlign={"justify"} mt={1} mb={3}>
+						{backContent.description}
+					</Typography>
+
 					{backContent.videoContentURL && (
-						<ReactPlayer url={backContent.videoContentURL} width={"80%"} />
+						<Box sx={{ width: "95%", aspectRatio: 16 / 9 }} mb={3}>
+							<ReactPlayer
+								url={backContent.videoContentURL}
+								height={"100%"}
+								width={"100%"}
+							/>
+						</Box>
 					)}
-				</Stack>
-				<Button variant="outlined" color="primary" onClick={onClick}>
-					Flip
-				</Button>
+
+					<Stack alignItems={"center"} width={"100%"} mb={3} spacing={2}>
+						{backContent.images?.map((el) => (
+							<img
+								loading="lazy"
+								width={"95%"}
+								height={"auto"}
+								style={{
+									aspectRatio: 16 / 9,
+									background: `url(${el})`,
+									backgroundSize: "cover",
+									backgroundRepeat: "no-repeat",
+									backgroundPosition: "center",
+								}}
+								onClick={() => {
+									console.log(el);
+									openModal(el);
+								}}
+							/>
+						))}
+					</Stack>
+
+					<Stack alignItems={"center"} width={"100%"} mb={3} spacing={2}>
+						{backContent.links?.map((el) => (
+							<Link component={"a"} href={el.url} target="_blank">
+								{el?.displayName}
+							</Link>
+						))}
+					</Stack>
+					<Button
+						variant="outlined"
+						color="primary"
+						onClick={onClick}
+						sx={{ mb: 2 }}
+					>
+						CLose Project
+					</Button>
+				</Box>
 			</CardSide>
 		</Box>
 	);

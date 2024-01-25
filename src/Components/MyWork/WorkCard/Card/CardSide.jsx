@@ -17,7 +17,7 @@ function CardSide({ children, className, sx }) {
 				borderRadius: 2,
 				boxSizing: "border-box",
 				paddingBlock: 2,
-				paddingInline: 1,
+				paddingInline: 2,
 				boxShadow: "0px 0px 15px rgba(0,0,0,0.4)",
 				"-webkit-backface-visibility": "hidden",
 				backfaceVisibility: "hidden",

@@ -14,6 +14,7 @@ import TimelineOppositeContent, {
 import PropTypes from "prop-types";
 import FadeSection from "../../common/FadeSection/FadeSection";
 import RotateSection from "../../common/RotateSection/RotateSection";
+import SkillChip from "../../common/SkillChip/SkillChip";
 
 function Course(props) {
 	const theme = useTheme();
@@ -70,16 +71,7 @@ function Course(props) {
 							columnGap={1}
 						>
 							{props.relevantCoursework.map((el) => (
-								<Chip
-									label={el}
-									sx={{
-										mt: 0.5,
-										"& .MuiChip-label": {
-											fontWeight: 800,
-										},
-									}}
-									color="skillChip"
-								/>
+								<SkillChip label={el} outlined />
 							))}
 						</Box>
 					</Box>
