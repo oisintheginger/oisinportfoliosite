@@ -50,7 +50,7 @@ export default function Skills() {
 								title={"Software Design + Development"}
 								icon={
 									<img
-										src="./placeholder_icons/software-design-icon.svg"
+										src="/oisintheginger.github.io/oisinportfoliosite/placeholder_icons/software-design-icon.svg"
 										width={128}
 										height={128}
 									/>
@@ -80,7 +80,7 @@ export default function Skills() {
 								title={"Programming"}
 								icon={
 									<img
-										src="./placeholder_icons/programming-icon.svg"
+										src="/oisintheginger.github.io/oisinportfoliosite/placeholder_icons/programming-icon.svg"
 										width={128}
 										height={128}
 									/>
@@ -110,7 +110,7 @@ export default function Skills() {
 								title={"UX Research & Design"}
 								icon={
 									<img
-										src="./placeholder_icons/ux-diagram.svg"
+										src="/oisintheginger.github.io/oisinportfoliosite/placeholder_icons/ux-diagram.svg"
 										width={128}
 										height={128}
 									/>
@@ -140,7 +140,7 @@ export default function Skills() {
 								title={"Game Development"}
 								icon={
 									<img
-										src="./placeholder_icons/game-design-icon.svg"
+										src="/oisintheginger.github.io/oisinportfoliosite/placeholder_icons/game-design-icon.svg"
 										width={128}
 										height={128}
 									/>

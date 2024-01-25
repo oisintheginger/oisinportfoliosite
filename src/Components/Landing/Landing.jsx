@@ -76,7 +76,8 @@ export default function Landing() {
 					>
 						<Box
 							sx={{
-								backgroundImage: "url(/MoustacheNotification.svg)",
+								backgroundImage:
+									"url(/oisintheginger.github.io/oisinportfoliosite/MoustacheNotification.svg)",
 								backgroundSize: "contain",
 								backgroundRepeat: "no-repeat",
 							}}
@@ -108,7 +109,8 @@ export default function Landing() {
 					>
 						<Box
 							sx={{
-								backgroundImage: "url(./placeholder-portfolio-headshot.png)",
+								backgroundImage:
+									"url(/oisintheginger.github.io/oisinportfoliosite/placeholder-portfolio-headshot.png)",
 								backgroundSize: "cover",
 								backgroundRepeat: "no-repeat",
 							}}
@@ -130,7 +132,7 @@ export default function Landing() {
 					>
 						<Box
 							component={"img"}
-							src="/placeholder-portfolio-headshot-small.png"
+							src="/oisintheginger.github.io/oisinportfoliosite/placeholder-portfolio-headshot-small.png"
 							height={{ xs: "150px", md: "200px" }}
 							width={{ xs: "150px", md: "200px" }}
 							borderRadius={"50%"}

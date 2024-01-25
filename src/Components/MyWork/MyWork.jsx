@@ -122,8 +122,10 @@ export default function MyWork() {
 						<SlideInSection direction={false}>
 							<CardContainer
 								frontContent={{
-									logoSrc: "./images/pressrekord/press-rekord-logo.png",
-									backgroundSrc: "./images/pressrekord/press-rekord-banner.png",
+									logoSrc:
+										"/oisintheginger.github.io/oisinportfoliosite/images/pressrekord/press-rekord-logo.png",
+									backgroundSrc:
+										"/oisintheginger.github.io/oisinportfoliosite/images/pressrekord/press-rekord-banner.png",
 									gradient:
 										"linear-gradient(0deg, rgba(15, 7, 26, 0.75), rgba(15, 7, 26, 0.75))",
 									title: "Press Rekord",
@@ -164,8 +166,10 @@ export default function MyWork() {
 						<SlideInSection>
 							<CardContainer
 								frontContent={{
-									logoSrc: "./images/hmh/HMHEd.svg",
-									backgroundSrc: "./images/stockphotos/classroom.jpeg",
+									logoSrc:
+										"/oisintheginger.github.io/oisinportfoliosite/images/hmh/HMHEd.svg",
+									backgroundSrc:
+										"/oisintheginger.github.io/oisinportfoliosite/images/stockphotos/classroom.jpeg",
 									gradient:
 										"linear-gradient(0deg, rgba(48,48,0,0.7711614186690301) 0%, rgba(65,63,0,0.6339065167082458) 59%, rgba(150,141,0,0.2977720629267332) 100%)",
 									title: "Ed Teacher Dashboard Refactor & New States",
@@ -196,8 +200,10 @@ export default function MyWork() {
 						<SlideInSection direction={false}>
 							<CardContainer
 								frontContent={{
-									logoSrc: "./images/face2face/nodejslogo.svg",
-									backgroundSrc: "./images/face2face/computerbackground.jpg",
+									logoSrc:
+										"/oisintheginger.github.io/oisinportfoliosite/images/face2face/nodejslogo.svg",
+									backgroundSrc:
+										"/oisintheginger.github.io/oisinportfoliosite/images/face2face/computerbackground.jpg",
 									title: "Face 2 Face Backend API",
 									role: "Student Project",
 									gradient:
@@ -232,10 +238,12 @@ export default function MyWork() {
 						<SlideInSection>
 							<CardContainer
 								frontContent={{
-									backgroundSrc: "./images/stockphotos/real-estate-stock.jpg",
+									backgroundSrc:
+										"/oisintheginger.github.io/oisinportfoliosite/images/stockphotos/real-estate-stock.jpg",
 									title: "Renting Made Easy",
 									role: "Frontend Developer and UX Design",
-									logoSrc: "./images/rme/RMELogo.svg",
+									logoSrc:
+										"/oisintheginger.github.io/oisinportfoliosite/images/rme/RMELogo.svg",
 									gradient:
 										"linear-gradient(180deg, rgba(0,89,90,0.8327860685289741) 0%, rgba(4,69,74,0.7179401301536239) 35%, rgba(6,104,106,0.3565955923384979) 100%)",
 									skills: [

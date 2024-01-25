@@ -69,7 +69,8 @@ export default function About() {
 				sx={{
 					gridColumnStart: "main-start",
 					gridColumnEnd: "main-end",
-					background: "url(./about-divider-wave.svg)",
+					background:
+						"url(/oisintheginger.github.io/oisinportfoliosite/about-divider-wave.svg)",
 					width: "100%",
 					height: "100px",
 					backgroundSize: "cover",
