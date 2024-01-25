@@ -163,8 +163,7 @@ function CardBase({ onClick, frontContent, backContent }) {
 								loading="lazy"
 								width={"95%"}
 								height={"auto"}
-								// eslint-disable-next-line
-								alt={"Project Image"}
+								alt={"Project Content"}
 								style={{
 									aspectRatio: 16 / 9,
 									background: `url(${el})`,
