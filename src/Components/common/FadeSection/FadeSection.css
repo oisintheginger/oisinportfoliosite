@@ -1,10 +1,10 @@
 
    .fadeIn{
         animation: fadeInAnim cubic-bezier(.37,.11,0,.83);
-        animation-timeline: view();
-        animation-range-start: cover;
-        animation-range-end: 50svh;
-        animation-fill-mode: forwards;
+        animation-timeline: view()!important;
+        animation-range-start: cover!important;
+        animation-range-end: 50svh!important;
+        animation-fill-mode: forwards!important;
         
         
     }

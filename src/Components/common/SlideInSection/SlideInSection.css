@@ -5,11 +5,11 @@
 
     .slideIn{
         animation: slideIn cubic-bezier(.37,.11,0,.83);
-        animation-timeline: view();
-        animation-range-start: cover;
-        animation-range-end: 20svh;
-        animation-fill-mode: forwards;
-        transform-origin: bottom center;
+        animation-timeline: view()!important;
+        animation-range-start: cover !important;
+        animation-range-end: 20svh !important;
+        animation-fill-mode: forwards !important;
+        transform-origin: bottom center !important;
 
     }
     
