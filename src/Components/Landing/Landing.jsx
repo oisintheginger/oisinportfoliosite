@@ -223,7 +223,7 @@ export default function Landing() {
 						zIndex={3}
 					>
 						<Box minWidth={"25%"} maxWidth={"30%"}>
-							<Typography textAlign={"center"}>Web Dev</Typography>
+							<Typography textAlign={"center"}>Software Engineer</Typography>
 						</Box>
 						<Divider
 							orientation="vertical"
