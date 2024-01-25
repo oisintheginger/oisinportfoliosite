@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Box } from "@mui/material";
 
 function CardSide({ children, className, sx }) {

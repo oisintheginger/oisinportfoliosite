@@ -1,14 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {
-	Grid,
-	Box,
-	Stack,
-	Typography,
-	Chip,
-	List,
-	ListItem,
-} from "@mui/material";
+import { Grid, Box, Stack, Typography, List, ListItem } from "@mui/material";
 import SkillChip from "../../common/SkillChip/SkillChip";
 function ExperienceItem({
 	companyLogo,

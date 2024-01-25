@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import "./flip-card-base-transition.css";
-import { Box, Button, Chip, Link, Stack, Typography } from "@mui/material";
+import { Box, Button, Link, Stack, Typography } from "@mui/material";
 import ReactPlayer from "react-player/lazy";
 import CardSide from "./CardSide";
 import {
@@ -163,6 +163,8 @@ function CardBase({ onClick, frontContent, backContent }) {
 								loading="lazy"
 								width={"95%"}
 								height={"auto"}
+								// eslint-disable-next-line
+								alt={"Project Image"}
 								style={{
 									aspectRatio: 16 / 9,
 									background: `url(${el})`,

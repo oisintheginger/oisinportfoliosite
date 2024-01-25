@@ -1,6 +1,4 @@
 import { createTheme } from "@mui/material";
-import Urbanist from "./fonts/Urbanist-VariableFont_wght.ttf";
-
 const theme = createTheme({
 	palette: {
 		text: {},

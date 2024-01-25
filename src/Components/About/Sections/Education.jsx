@@ -1,6 +1,6 @@
 import React from "react";
 import SubsectionTitle from "../../common/SubsectionTitle/SubsectionTitle";
-import { Box, Chip, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
@@ -12,7 +12,6 @@ import TimelineOppositeContent, {
 } from "@mui/lab/TimelineOppositeContent";
 
 import PropTypes from "prop-types";
-import FadeSection from "../../common/FadeSection/FadeSection";
 import RotateSection from "../../common/RotateSection/RotateSection";
 import SkillChip from "../../common/SkillChip/SkillChip";
 
