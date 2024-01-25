@@ -116,7 +116,7 @@ export default function MyWork() {
 					justifyContent={"center"}
 				>
 					<Grid item xs={12} sm={12} md={12} lg={6}>
-						<SlideInSection>
+						<SlideInSection direction={false}>
 							<CardContainer
 								frontContent={{
 									backgroundSrc: "/images/stockphotos/real-estate-stock.jpg",
@@ -234,7 +234,7 @@ export default function MyWork() {
 						</SlideInSection>
 					</Grid>
 					<Grid item xs={12} sm={12} md={12} lg={6}>
-						<SlideInSection direction={false}>
+						<SlideInSection>
 							<CardContainer
 								frontContent={{
 									logoSrc: "/images/face2face/nodejslogo.svg",
