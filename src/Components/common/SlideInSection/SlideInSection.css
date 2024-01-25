@@ -17,13 +17,13 @@
     
     @keyframes slideIn {
         from{
-            transform: translateX(var(--displacement)) scale(.5);
-            opacity: 0;
+            transform: translateX(var(--displacement)) scale(.5)!important;
+            opacity: 0!important;
         }
         to{
-            transform: translateX(0svw) scale(1);
+            transform: translateX(0svw) scale(1)!important;
 
-            opacity: 1;
+            opacity: 1!important;
         }
     }
 }

@@ -13,13 +13,13 @@
     
     @keyframes rotateIn {
         from{
-            transform: rotateZ(20deg);
-            opacity: 0;
+            transform: rotateZ(20deg)!important;
+            opacity: 0!important;
 
         }
         to{
-            transform: rotateZ(0deg);
-            opacity: 1;
+            transform: rotateZ(0deg)!important;
+            opacity: 1!important;
         }
     }
 }
