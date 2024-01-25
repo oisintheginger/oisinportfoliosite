@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import "./SlideInSection.css";
+// import "./SlideInSection.css";
 export default function SlideInSection({ children, direction = true }) {
 	return (
 		<Box
