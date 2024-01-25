@@ -54,7 +54,7 @@ function CardBase({ onClick, frontContent, backContent }) {
 						src={frontContent.logoSrc}
 						sx={{
 							width: "100%",
-							height: "30%",
+							height: "25%",
 							backgroundSize: "contain",
 							backgroundRepeat: "no-repeat",
 							backgroundImage: `url(${frontContent.logoSrc})`,
@@ -72,12 +72,16 @@ function CardBase({ onClick, frontContent, backContent }) {
 						<Typography variant="projectTitle" align="center">
 							{frontContent.title}
 						</Typography>
-						<Typography textAlign={"center"} align="center">
+						<Typography
+							variant="projectRole"
+							textAlign={"center"}
+							align="center"
+						>
 							{frontContent.role}
 						</Typography>
 					</Box>
 					<Box
-						sx={{ width: "100%", height: "30%" }}
+						sx={{ width: "100%", height: { xs: "30%", lg: "40%" } }}
 						display={"flex"}
 						flexDirection={"column"}
 						alignItems={"center"}
@@ -92,7 +96,7 @@ function CardBase({ onClick, frontContent, backContent }) {
 								flexWrap: "wrap",
 								overflowY: "scroll",
 								paddingBlock: 2,
-								rowGap: 1,
+								rowGap: 1.25,
 								columnGap: 1,
 								maskImage:
 									"linear-gradient(180deg, rgba(128,128,128,0) 0%,rgba(128,128,128,1) 10%,rgba(128,128,128,1) 90%, rgba(128,128,128,0) 100%)",
@@ -140,19 +144,18 @@ function CardBase({ onClick, frontContent, backContent }) {
 						paddingBlock: 1,
 					}}
 				>
-					<Typography textAlign={"justify"} mt={1} mb={3}>
-						{backContent.description}
-					</Typography>
+					{backContent.description?.map((el) => (
+						<Typography textAlign={"left"} mt={0.5} mb={0.5}>
+							{el}
+						</Typography>
+					))}
 
-					{backContent.videoContentURL && (
-						<Box sx={{ width: "95%", aspectRatio: 16 / 9 }} mb={3}>
-							<ReactPlayer
-								url={backContent.videoContentURL}
-								height={"100%"}
-								width={"100%"}
-							/>
-						</Box>
-					)}
+					{backContent.videoContentURL &&
+						backContent.videoContentURL?.map((el) => (
+							<Box sx={{ width: "95%", aspectRatio: 16 / 9 }} mt={4} mb={3}>
+								<ReactPlayer url={el} height={"100%"} width={"100%"} />
+							</Box>
+						))}
 
 					<Stack alignItems={"center"} width={"100%"} mb={3} spacing={2}>
 						{backContent.images?.map((el) => (

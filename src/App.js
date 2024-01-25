@@ -52,9 +52,8 @@ function App() {
 				direction={"column"}
 				spacing={2}
 				alignItems={"center"}
-				justifyContent={"flex-start"}
+				justifyContent={"flex-end"}
 				width={"100%"}
-				height={"10svh"}
 				mb={5}
 			>
 				<Stack direction={"row"} justifyContent={"center"} spacing={3}>

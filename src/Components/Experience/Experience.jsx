@@ -25,7 +25,8 @@ export default function Experience() {
 				gridRowStart: "experience-start",
 				gridRowEnd: "experience-end",
 				scrollSnapType: "y mandatory",
-				marginBlock: 20,
+				marginBlockStart: 20,
+				marginBlockEnd: 5,
 				paddingBlockStart: 5,
 				paddingBlockEnd: 3,
 			}}

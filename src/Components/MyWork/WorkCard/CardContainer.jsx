@@ -16,7 +16,7 @@ function CardContainer({ frontContent, backContent }) {
 		<Box
 			component={"div"}
 			className="flip-card-container"
-			sx={{ height: { xs: "300px", lg: "48svh" }, width: "100%" }}
+			sx={{ height: { xs: "350px", lg: "48svh" }, width: "99%" }}
 		>
 			<CSSTransition in={flip} timeout={800} classNames={"flip"}>
 				<CardBase

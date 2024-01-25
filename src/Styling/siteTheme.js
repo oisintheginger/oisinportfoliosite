@@ -90,10 +90,19 @@ theme.typography.body2 = {
 theme.typography.projectTitle = {
 	fontSize: "2rem",
 	[theme.breakpoints.down("md")]: {
-		fontSize: "2rem",
+		fontSize: "1.6rem",
 	},
 	color: "#E3FAFB",
 	fontWeight: 900,
+	fontFamily: "Urbanist",
+};
+theme.typography.projectRole = {
+	fontSize: "1.2rem",
+	[theme.breakpoints.down("md")]: {
+		fontSize: "1.2rem",
+	},
+	color: "#E3FAFB",
+	fontWeight: 600,
 	fontFamily: "Urbanist",
 };
 

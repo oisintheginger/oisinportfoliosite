@@ -100,7 +100,7 @@ function ExperienceItem({
 				<Grid item xs={12}>
 					<Box
 						display={"flex"}
-						flexDirection={"row-reverse"}
+						flexDirection={"row"}
 						flexWrap={"wrap"}
 						justifyContent={"center"}
 						alignItems={"center"}
