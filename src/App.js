@@ -62,7 +62,7 @@ function App() {
 						target="_blank"
 						href={"https://www.linkedin.com/in/oisin-fitzpatrick/"}
 						sx={{
-							background: 'url("/oisintheginger.github.io/linkedInIcon.svg")',
+							background: 'url("/linkedInIcon.svg")',
 							backgroundSize: "contain",
 							cursor: "pointer",
 						}}
@@ -74,7 +74,7 @@ function App() {
 						target="_blank"
 						href={"https://github.com/oisintheginger"}
 						sx={{
-							background: 'url("/oisintheginger.github.io/githubIcon.svg")',
+							background: 'url("/githubIcon.svg")',
 							backgroundSize: "contain",
 							cursor: "pointer",
 						}}
