@@ -12,7 +12,12 @@ export const FrontsideContentType = {
 export const BacksideContentType = {
 	description: PropTypes.arrayOf(PropTypes.string),
 	videoContentURL: PropTypes.arrayOf(PropTypes.string),
-	images: PropTypes.arrayOf(PropTypes.string),
+	images: PropTypes.arrayOf(
+		PropTypes.shape({
+			thumbnail: PropTypes.string,
+			fullImage: PropTypes.string,
+		})
+	),
 	links: PropTypes.arrayOf(
 		PropTypes.shape({ displayName: PropTypes.string, url: PropTypes.string })
 	),

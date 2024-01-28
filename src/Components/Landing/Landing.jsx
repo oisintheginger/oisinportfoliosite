@@ -1,4 +1,4 @@
-import { Box, Button, Divider, Typography } from "@mui/material";
+import { Box, Button, Divider, Tooltip, Typography } from "@mui/material";
 import React from "react";
 
 export default function Landing() {
@@ -180,14 +180,16 @@ export default function Landing() {
 							>
 								Contact
 							</Button>
-							<Button
-								variant="outlined"
-								sx={{ width: "50%" }}
-								href="OisinFitzpatrickResume.pdf"
-								download={"OisinFitzpatrickResume.pdf"}
-							>
-								Resumé
-							</Button>
+							<Tooltip title={"Download Resumé"}>
+								<Button
+									variant="outlined"
+									sx={{ width: "50%" }}
+									href="OisinFitzpatrickResume.pdf"
+									download={"OisinFitzpatrickResume.pdf"}
+								>
+									Resumé
+								</Button>
+							</Tooltip>
 						</Box>
 					</Box>
 				</Box>

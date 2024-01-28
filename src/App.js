@@ -1,4 +1,4 @@
-import { Typography, Stack, ThemeProvider, Box } from "@mui/material";
+import { Typography, Stack, ThemeProvider, Box, Tooltip } from "@mui/material";
 import "./App.css";
 import theme from "./Styling/siteTheme";
 import Landing from "./Components/Landing/Landing";
@@ -38,33 +38,53 @@ function App() {
 				mb={5}
 			>
 				<Stack direction={"row"} justifyContent={"center"} spacing={3}>
-					<Box
-						component={"a"}
-						target="_blank"
-						href={"https://www.linkedin.com/in/oisin-fitzpatrick/"}
-						sx={{
-							background: 'url("/linkedInIcon.svg")',
-							backgroundSize: "contain",
-							cursor: "pointer",
-						}}
-						width={"2rem"}
-						height={"2rem"}
-					/>
-					<Box
-						component={"a"}
-						target="_blank"
-						href={"https://github.com/oisintheginger"}
-						sx={{
-							background: 'url("/githubIcon.svg")',
-							backgroundSize: "contain",
-							cursor: "pointer",
-						}}
-						width={"2rem"}
-						height={"2rem"}
-					/>
+					<Tooltip title="LinkedIn Page">
+						<Box
+							component={"a"}
+							target="_blank"
+							href={"https://www.linkedin.com/in/oisin-fitzpatrick/"}
+							sx={{
+								background: 'url("/linkedInIcon.svg")',
+								backgroundSize: "contain",
+								cursor: "pointer",
+							}}
+							width={"2rem"}
+							height={"2rem"}
+						/>
+					</Tooltip>
+					<Tooltip title="GitHub Profile">
+						<Box
+							component={"a"}
+							target="_blank"
+							href={"https://github.com/oisintheginger"}
+							sx={{
+								background: 'url("/githubIcon.svg")',
+								backgroundSize: "contain",
+								cursor: "pointer",
+							}}
+							width={"2rem"}
+							height={"2rem"}
+						/>
+					</Tooltip>
+					<Tooltip title="Itch.io Page">
+						<Box
+							component={"a"}
+							target="_blank"
+							href={"https://oisin-the-ginger.itch.io/"}
+							sx={{
+								background: 'url("/itchioIcon.svg")',
+								backgroundSize: "contain",
+								backgroundRepeat: "no-repeat",
+								cursor: "pointer",
+							}}
+							width={"2rem"}
+							height={"2rem"}
+						/>
+					</Tooltip>
 				</Stack>
-				<Typography>Built with React and MUI</Typography>
-				<Typography>&copy; Oisín Fitzpatrick 2024</Typography>
+				<Typography variant="footer">Built with React and MUI</Typography>
+				<Typography variant="footer">&copy; Oisín Fitzpatrick 2024</Typography>
+				<Typography variant="footer">oisintfitzpatrick@gmail.com</Typography>
 			</Stack>
 		</ThemeProvider>
 	);

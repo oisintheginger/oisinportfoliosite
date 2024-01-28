@@ -9,14 +9,16 @@ export default function MyWork() {
 	const [modalOpen, setModalOpen] = useState(false);
 
 	const [modalContent, setModalContent] = useState(null);
+	const [modalAlt, setModalAlt] = useState(null);
 
 	const closeModal = () => {
 		setModalOpen(false);
 	};
 
-	const openModal = (imageUrl) => {
+	const openModal = (imageUrl, alt) => {
 		setModalOpen(true);
 		setModalContent(imageUrl);
+		setModalAlt(alt);
 	};
 
 	return (
@@ -213,11 +215,36 @@ export default function MyWork() {
 									],
 									videoContentURL: ["https://youtu.be/5bzMmUYta7E"],
 									images: [
-										"https://img.itch.zone/aW1hZ2UvNzk2MjAwLzU4OTkzNDQucG5n/347x500/Acay31.png",
-										"https://img.itch.zone/aW1hZ2UvNzk2MjAwLzU4OTkxNTkuanBn/347x500/pb%2F5N1.jpg",
-										"https://img.itch.zone/aW1hZ2UvNzk2MjAwLzU4OTkxNTYuanBn/347x500/5sVOSB.jpg",
-										"https://img.itch.zone/aW1hZ2UvNzk2MjAwLzU4OTkxNjkuanBn/347x500/4IkCdM.jpg",
-										"https://img.itch.zone/aW1hZ2UvNzk2MjAwLzU4OTkxNjYuanBn/347x500/f6wLzD.jpg",
+										{
+											thumbnail:
+												"https://img.itch.zone/aW1hZ2UvNzk2MjAwLzU4OTkzNDQucG5n/347x500/Acay31.png",
+											fullImage:
+												"https://img.itch.zone/aW1hZ2UvNzk2MjAwLzU4OTkzNDQucG5n/original/5l7I3X.png",
+										},
+										{
+											thumbnail:
+												"https://img.itch.zone/aW1hZ2UvNzk2MjAwLzU4OTkxNTkuanBn/347x500/pb%2F5N1.jpg",
+											fullImage:
+												"https://img.itch.zone/aW1hZ2UvNzk2MjAwLzU4OTkxNTkuanBn/original/Yz5j59.jpg",
+										},
+										{
+											thumbnail:
+												"https://img.itch.zone/aW1hZ2UvNzk2MjAwLzU4OTkxNTYuanBn/347x500/5sVOSB.jpg",
+											fullImage:
+												"https://img.itch.zone/aW1hZ2UvNzk2MjAwLzU4OTkxNTYuanBn/original/Hh3zCN.jpg",
+										},
+										{
+											thumbnail:
+												"https://img.itch.zone/aW1hZ2UvNzk2MjAwLzU4OTkxNjkuanBn/347x500/4IkCdM.jpg",
+											fullImage:
+												"https://img.itch.zone/aW1hZ2UvNzk2MjAwLzU4OTkxODMuanBn/original/x0Zpej.jpg",
+										},
+										{
+											thumbnail:
+												"https://img.itch.zone/aW1hZ2UvNzk2MjAwLzU4OTkxNjYuanBn/347x500/f6wLzD.jpg",
+											fullImage:
+												"https://img.itch.zone/aW1hZ2UvNzk2MjAwLzU4OTkxNjYuanBn/original/ZPXKth.jpg",
+										},
 									],
 									links: [
 										{
@@ -284,16 +311,13 @@ export default function MyWork() {
 						<CloseIcon />
 					</IconButton>
 					<img
-						component={"img"}
-						alt="Modal Content"
+						src={modalContent}
 						width={"900px"}
 						height={"auto"}
+						loading="lazy"
+						alt={modalAlt}
 						style={{
 							position: "absolute",
-							aspectRatio: 16 / 9,
-							background: `url(${modalContent})`,
-							backgroundSize: "cover",
-							backgroundRepeat: "no-repeat",
 							maxWidth: "95svw",
 							top: "50%",
 							left: "50%",

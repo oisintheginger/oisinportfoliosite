@@ -124,4 +124,14 @@ theme.typography.experienceDetail = {
 	fontFamily: "Urbanist",
 };
 
+theme.typography.footer = {
+	fontSize: "1rem",
+	[theme.breakpoints.down("md")]: {
+		fontSize: "1rem",
+	},
+	color: "#E3FAFB",
+	fontWeight: 200,
+	fontFamily: "Urbanist",
+};
+
 export default theme;

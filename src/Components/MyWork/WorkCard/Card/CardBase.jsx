@@ -118,7 +118,19 @@ function CardBase({ onClick, frontContent, backContent }) {
 						}}
 						flexGrow={1}
 					>
-						<Button variant="outlined" color="primary" onClick={onClick}>
+						<Button
+							variant="outlined"
+							color="primary"
+							onClick={onClick}
+							sx={{
+								backgroundColor: "rgba(19, 19, 19, 0.4)",
+								fontWeight: 700,
+								borderWidth: 2,
+								"&:hover": {
+									borderWidth: 2,
+								},
+							}}
+						>
 							Open Project
 						</Button>
 					</Box>
@@ -158,22 +170,15 @@ function CardBase({ onClick, frontContent, backContent }) {
 						))}
 
 					<Stack alignItems={"center"} width={"100%"} mb={3} spacing={2}>
-						{backContent.images?.map((el) => (
+						{backContent.images?.map((el, i) => (
 							<img
 								loading="lazy"
-								width={"95%"}
+								src={el.thumbnail}
+								width="95%"
 								height={"auto"}
-								alt={"Project Content"}
-								style={{
-									aspectRatio: 16 / 9,
-									background: `url(${el})`,
-									backgroundSize: "cover",
-									backgroundRepeat: "no-repeat",
-									backgroundPosition: "center",
-								}}
+								alt={`Project Image Number ${i}`}
 								onClick={() => {
-									console.log(el);
-									openModal(el);
+									openModal(el.fullImage, `Project Image Number ${i}`);
 								}}
 							/>
 						))}
@@ -190,7 +195,13 @@ function CardBase({ onClick, frontContent, backContent }) {
 						variant="outlined"
 						color="primary"
 						onClick={onClick}
-						sx={{ mb: 2 }}
+						sx={{
+							fontWeight: 700,
+							borderWidth: 2,
+							"&:hover": {
+								borderWidth: 2,
+							},
+						}}
 					>
 						CLose Project
 					</Button>
