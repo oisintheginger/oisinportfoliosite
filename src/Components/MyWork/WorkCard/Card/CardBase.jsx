@@ -176,7 +176,7 @@ function CardBase({ onClick, frontContent, backContent }) {
 								src={el.thumbnail}
 								width="95%"
 								height={"auto"}
-								alt={`Project Image Number ${i}`}
+								alt={`Number ${i}`}
 								onClick={() => {
 									openModal(el.fullImage, `Project Image Number ${i}`);
 								}}
