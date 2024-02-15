@@ -55,27 +55,6 @@ export default function Landing() {
 				>
 					<Box
 						sx={{
-							gridColumnStart: "moustache-start",
-							gridColumnEnd: "end",
-							gridRowStart: "first-row-start",
-							gridRowEnd: "end",
-							overflow: "clip",
-							borderRadius: "0px 0px 2rem 0px",
-						}}
-						display={{ xs: "none", lg: "flex" }}
-					>
-						<Box
-							sx={{
-								backgroundImage: "url(/MoustacheNotification.svg)",
-								backgroundSize: "contain",
-								backgroundRepeat: "no-repeat",
-							}}
-							width={"250px"}
-							height={"200px"}
-						/>
-					</Box>
-					<Box
-						sx={{
 							gridColumnStart: "third-col-start",
 							gridColumnEnd: "end",
 							gridRowStart: "first-row-start",
