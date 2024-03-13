@@ -187,6 +187,7 @@ export default function Skills() {
 							>
 								{[
 									"JavaScript",
+									"Java",
 									"C#",
 									"Python",
 									"SQL",
