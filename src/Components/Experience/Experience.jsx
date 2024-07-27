@@ -59,6 +59,35 @@ export default function Experience() {
 					}}
 				>
 					<ExperienceItem
+						companyLogo={""}
+						companyName={"Online Application"}
+						highlightSkills={[
+							"Fullstack Engineer",
+							"Vue",
+							"Laravel",
+							"Inertia",
+							"PHP",
+							"JavaScript",
+							"UX Design",
+							"MySQL",
+							"Ubuntu",
+							"VirtualBox",
+						]}
+						role={"Software Engineer"}
+						date={"April 2024 - Current"}
+						jobDescription={[
+							"In my current role as a fullstack software engineer with Online Application my primary focus has been assisting the development of a revamped UI for our product, using Vue.js. The existing system has been developed using the Laravel framework, using blade templates. The UI upgrade project will take the system to a new level by incorporating Vue.JS as a frontend framework, while using InertiaJS to interact with the backend systems.",
+							"While I am a fullstack developer, and regularly create backend systems, my skills primarily reside in UX design and frontend development, meaning that I get to make important design decisions on many parts of the interface. I collaborate extensively with the development and QA team which are all located across the globe, working to plan and create new features and to solve problems.",
+							"Although I have only been with Online Application a short while, I have made significant positive impacts and contributions to the product. I am excited to continue to grow in this role and expand my knowledge.",
+						]}
+						bulletPoints={[
+							"Frontend Development with JavaScript and Vue.js",
+							"Backend Development with PHP and Laravel",
+							"UX/UI Design",
+							"Development using Ubuntu VM and VirtualBox",
+						]}
+					/>
+					<ExperienceItem
 						companyLogo={"/images/hmh/hmh-logo.png"}
 						companyName={"Houghton Mifflin Harcourt"}
 						highlightSkills={[
