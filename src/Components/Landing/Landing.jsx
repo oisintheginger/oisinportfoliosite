@@ -77,7 +77,7 @@ export default function Landing() {
 					>
 						<Box
 							sx={{
-								backgroundImage: "url(/placeholder-portfolio-headshot.png)",
+								backgroundImage: "url(/headshot.png)",
 								backgroundSize: "cover",
 								backgroundRepeat: "no-repeat",
 							}}
@@ -99,7 +99,7 @@ export default function Landing() {
 					>
 						<Box
 							component={"img"}
-							src="/placeholder-portfolio-headshot-small.png"
+							src="/headshot.png"
 							height={{ xs: "150px", md: "200px" }}
 							width={{ xs: "150px", md: "200px" }}
 							borderRadius={"50%"}
@@ -143,7 +143,7 @@ export default function Landing() {
 							sx={{ textJustify: "inter-character" }}
 						>
 							{
-								"Master Degree recipient from Technological University Dublin, looking for opportunities to grow as software developer and designer."
+								"Experienced Software Engineer focused on building high‑quality products, now seeking roles that prioritize growth, learning, and long‑term skill development."
 							}
 						</Typography>
 						<Box
@@ -194,7 +194,7 @@ export default function Landing() {
 						zIndex={3}
 					>
 						<Box minWidth={"25%"} maxWidth={"30%"}>
-							<Typography textAlign={"center"}>Software Engineer</Typography>
+							<Typography textAlign={"center"}>Software Engineering</Typography>
 						</Box>
 						<Divider
 							orientation="vertical"
@@ -203,7 +203,7 @@ export default function Landing() {
 							sx={{ backgroundColor: "primary.main" }}
 						/>
 						<Box minWidth={"25%"} maxWidth={"30%"}>
-							<Typography textAlign={"center"}>UX/UI</Typography>
+							<Typography textAlign={"center"}>Product Focused</Typography>
 						</Box>
 						<Divider
 							orientation="vertical"
@@ -212,7 +212,7 @@ export default function Landing() {
 							sx={{ backgroundColor: "primary.main" }}
 						/>
 						<Box minWidth={"25%"} maxWidth={"30%"}>
-							<Typography textAlign={"center"}>Game Design</Typography>
+							<Typography textAlign={"center"}>Reliability</Typography>
 						</Box>
 					</Box>
 				</Box>

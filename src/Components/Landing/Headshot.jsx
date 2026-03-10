@@ -22,7 +22,7 @@ function Headshot() {
 				alignItems={"center"}
 				justifyContent={"center"}
 				sx={{
-					backgroundImage: "url(placeholder-portfolio-headshot.jpg)",
+					backgroundImage: "url(headshot.png)",
 					backgroundSize: "contain",
 				}}
 				// sx={{ boxShadow: "5px 5px 14px #151515,-5px -5px 14px #252525" }}

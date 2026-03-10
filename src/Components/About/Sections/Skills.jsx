@@ -47,19 +47,16 @@ export default function Skills() {
 					>
 						<Grid item xs={12} sm={6}>
 							<Skill
-								title={"Software Design + Development"}
+								title={"Software Engineering"}
 								icon={
 									<img
 										src="/placeholder_icons/software-design-icon.svg"
-										alt="Software Design Icon"
+										alt="Software Engineering Icon"
 										width={128}
 										height={128}
 									/>
 								}
-								description={[
-									"I strive to generate well designed/architected code.",
-									"I also have extensive experience developing in agile teams.",
-								]}
+								description={[]}
 							/>
 							<Box
 								display={"flex"}
@@ -78,19 +75,16 @@ export default function Skills() {
 						</Grid>
 						<Grid item xs={12} sm={6}>
 							<Skill
-								title={"Programming"}
+								title={"Fullstack Development"}
 								icon={
 									<img
 										src="/placeholder_icons/programming-icon.svg"
-										alt="Programming Icon"
+										alt="Fullstack Development Icon"
 										width={128}
 										height={128}
 									/>
 								}
-								description={[
-									"I strive to generate well designed/architected code.",
-									"I also have extensive experience developing in agile teams.",
-								]}
+								description={[]}
 							/>
 							<Box
 								display={"flex"}
@@ -109,19 +103,16 @@ export default function Skills() {
 						</Grid>
 						<Grid item xs={12} sm={6}>
 							<Skill
-								title={"UX Research & Design"}
+								title={"Testing / Investigation"}
 								icon={
 									<img
 										src="/placeholder_icons/ux-diagram.svg"
 										width={128}
 										height={128}
-										alt="UX Design Icon"
+										alt="Testing / Investigation Icon"
 									/>
 								}
-								description={[
-									"I strive to generate well designed/architected code.",
-									"I also have extensive experience developing in agile teams.",
-								]}
+								description={[]}
 							/>
 							<Box
 								display={"flex"}
@@ -140,19 +131,16 @@ export default function Skills() {
 						</Grid>
 						<Grid item xs={12} sm={6}>
 							<Skill
-								title={"Game Development"}
+								title={"Delivery"}
 								icon={
 									<img
-										src="/placeholder_icons/game-design-icon.svg"
+										src="/placeholder_icons/deliveryIcon.svg"
 										width={128}
 										height={128}
-										alt="Game Design Icon"
+										alt="Delivery Icon"
 									/>
 								}
-								description={[
-									"I strive to generate well designed/architected code.",
-									"I also have extensive experience developing in agile teams.",
-								]}
+								description={[]}
 							/>
 							<Box
 								display={"flex"}
